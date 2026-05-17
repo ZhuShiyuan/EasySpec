@@ -2,12 +2,6 @@
 
 EasySpec 是给 Codex 新用户使用的轻量规范包。用户只需要把这个仓库的 GitHub URL 发给 Codex，Codex 就应当自动安装 `easy-spec` skill，并在目标项目里完成工作流初始化。
 
-## 给新手的一句话
-
-```text
-请读取并启用这个 EasySpec 仓库：<GitHub URL>
-```
-
 Codex 看到这个仓库后，会自动完成：
 
 - 安装或更新 `easy-spec` skill。
