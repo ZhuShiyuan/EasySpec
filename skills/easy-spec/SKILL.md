@@ -16,6 +16,7 @@ Archive means writing a task record. It does not mean closing the conversation.
 - Read `references/apply-guidelines.md` before entering Apply.
 - Read `references/project-onboarding.md` when deciding whether a target project is new or existing.
 - Use `references/spec-template.md` when creating a proposal file.
+- Use `templates/` when initializing `agent.md`, `openspec/settings.md`, proposals, archive records, and project summaries.
 
 ## Phase 0: Project Onboarding
 

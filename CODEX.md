@@ -64,14 +64,14 @@ openspec/specs/archive/
 Use these starter templates from this repository when creating target project records:
 
 ```text
-templates/agent.md
-templates/settings.md
-templates/proposal.md
-templates/archive.md
-templates/project-summary.md
+skills/easy-spec/templates/agent.md
+skills/easy-spec/templates/settings.md
+skills/easy-spec/templates/proposal.md
+skills/easy-spec/templates/archive.md
+skills/easy-spec/templates/project-summary.md
 ```
 
-Place `templates/agent.md` at the target project root as `agent.md`, or merge its EasySpec section into an existing `agent.md`. Place `templates/settings.md` inside the target project as `openspec/settings.md`. Use the proposal, archive, and project-summary templates only when creating files under `openspec/`.
+Place `skills/easy-spec/templates/agent.md` at the target project root as `agent.md`, or merge its EasySpec section into an existing `agent.md`. Place `skills/easy-spec/templates/settings.md` inside the target project as `openspec/settings.md`. Use the proposal, archive, and project-summary templates only when creating files under `openspec/`.
 
 Do not create top-level `knowledge/`, `specs/`, `settings.md`, or extra agent files in the target project. Use root `agent.md` plus `openspec/` as the only EasySpec-managed surface.
 

@@ -68,7 +68,7 @@ CODEX.md                          # Codex 读取此仓库时的自动 bootstrap 
 skills/easy-spec/                 # 可安装的 Codex skill
 skills/easy-spec/SKILL.md         # 工作流入口
 skills/easy-spec/references/      # onboarding、proposal、apply 规范
-templates/                        # 可复制到目标项目的模板
+skills/easy-spec/templates/       # 随 skill 一起安装的目标项目模板
 examples/                         # 新项目和已有项目的预期交互示例
 ```
 
