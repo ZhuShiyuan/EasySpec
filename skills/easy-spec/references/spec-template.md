@@ -42,6 +42,6 @@ Date: YYYY-MM-DD
 
 ## Archive Plan
 
-- Active spec: `easyspec/specs/active/YYYY-MM-DD-short-task-slug/proposal.md`
-- Change record: `easyspec/knowledge/changes/YYYY-MM-DD-short-task-slug.md`
+- Active spec: `openspec/specs/active/YYYY-MM-DD-short-task-slug/proposal.md`
+- Change record: `openspec/knowledge/changes/YYYY-MM-DD-short-task-slug.md`
 ```

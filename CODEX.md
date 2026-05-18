@@ -4,6 +4,8 @@ This repository is an EasySpec distribution package.
 
 When a user gives you this repository URL, automatically install the EasySpec skill and initialize the target project workflow. Do not ask the user to run setup commands.
 
+Do not copy this distribution repository's `README.md`, `LICENSE`, `CODEX.md`, `examples/`, or other repository documentation into the target project. Those files are only for publishing EasySpec itself.
+
 ## 1. Install Or Update The Skill
 
 Install the skill by copying:
@@ -40,28 +42,40 @@ The skill enforces:
 
 After installation, identify the target project. If the target project is not obvious from the current working directory or the user's wording, ask one short question to identify it.
 
-In the target project root, create one EasySpec management directory. Keep EasySpec agent memory, project notes, proposals, and archives inside it so the normal project root stays clean.
+In the target project root, create only one EasySpec trigger file:
+
+```text
+agent.md
+```
+
+This file should tell future agents to use EasySpec and read the `openspec/` directory before planning or changing code. If the target project already has `agent.md`, preserve the existing content and add or update an EasySpec section instead of overwriting the file.
+
+Then create one EasySpec management directory. Keep EasySpec settings, agent notes, memory, project notes, proposals, and archives inside it so the normal project root stays clean.
 
 Ensure these directories exist:
 
 ```text
-easyspec/
-easyspec/knowledge/changes/
-easyspec/specs/active/
-easyspec/specs/archive/
+openspec/
+openspec/knowledge/changes/
+openspec/specs/active/
+openspec/specs/archive/
 ```
 
 Use these starter templates from this repository when creating target project records:
 
 ```text
+templates/agent.md
+templates/settings.md
 templates/proposal.md
 templates/archive.md
 templates/project-summary.md
 ```
 
-Do not create top-level `knowledge/` or `specs/` directories in the target project. Use `easyspec/` as the single container for EasySpec-managed files.
+Place `templates/agent.md` at the target project root as `agent.md`, or merge its EasySpec section into an existing `agent.md`. Place `templates/settings.md` inside the target project as `openspec/settings.md`. Use the proposal, archive, and project-summary templates only when creating files under `openspec/`.
 
-Do not create EasySpec's own `easyspec/`, `knowledge/`, or `specs/` directories inside this distribution repository unless the user is developing EasySpec itself.
+Do not create top-level `knowledge/`, `specs/`, `settings.md`, or extra agent files in the target project. Use root `agent.md` plus `openspec/` as the only EasySpec-managed surface.
+
+Do not create EasySpec's own `openspec/`, `knowledge/`, or `specs/` directories inside this distribution repository unless the user is developing EasySpec itself.
 
 ## 3. Classify The Target Project
 
@@ -73,7 +87,7 @@ Classify the target project:
 For an existing project, ask before broad scanning:
 
 ```text
-这是一个已有项目。要不要我先阅读并整理项目结构、技术栈、运行命令和关键约定，生成 easyspec/knowledge/project-summary.md，之后再进入本次任务的 Proposal？
+这是一个已有项目。要不要我先阅读并整理项目结构、技术栈、运行命令和关键约定，生成 openspec/knowledge/project-summary.md，之后再进入本次任务的 Proposal？
 ```
 
 For a new project, skip broad scanning. Start with the requested task and record durable decisions later.
@@ -84,6 +98,6 @@ For every non-trivial coding task in the target project:
 
 1. Proposal: write the plan and wait for explicit approval.
 2. Apply: follow `skills/easy-spec/references/apply-guidelines.md`.
-3. Archive: write the task record under `easyspec/knowledge/changes/` and move or copy the proposal to `easyspec/specs/archive/`.
+3. Archive: write the task record under `openspec/knowledge/changes/` and move or copy the proposal to `openspec/specs/archive/`.
 
 Archive means task documentation. Do not close or archive the conversation unless the user explicitly requests that.
