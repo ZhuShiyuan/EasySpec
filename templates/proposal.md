@@ -39,5 +39,5 @@ Date: YYYY-MM-DD
 
 ## Archive Plan
 
-- Change record: `knowledge/changes/YYYY-MM-DD-short-task-slug.md`
-- Spec archive: `specs/archive/YYYY-MM-DD-short-task-slug/`
+- Change record: `easyspec/knowledge/changes/YYYY-MM-DD-short-task-slug.md`
+- Spec archive: `easyspec/specs/archive/YYYY-MM-DD-short-task-slug/`

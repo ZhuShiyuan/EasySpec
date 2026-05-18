@@ -6,6 +6,7 @@ Codex 看到这个仓库后，会自动完成：
 
 - 安装或更新 `easy-spec` skill。
 - 在目标项目中启用 Proposal -> Apply -> Archive 工作流。
+- 在目标项目根目录创建统一的 `easyspec/` 管理文件夹。
 - 按目标项目是新项目还是已有项目选择初始化方式。
 - 在写代码前先写 proposal，等用户确认后再 apply。
 - Apply 阶段遵守谨慎编码规范：简单、局部、可验证、不做无关重构。
@@ -18,7 +19,7 @@ Codex 看到这个仓库后，会自动完成：
 Codex 会先询问是否阅读并整理整个项目：
 
 ```text
-这是一个已有项目。要不要我先阅读并整理项目结构、技术栈、运行命令和关键约定，生成 knowledge/project-summary.md，之后再进入本次任务的 Proposal？
+这是一个已有项目。要不要我先阅读并整理项目结构、技术栈、运行命令和关键约定，生成 easyspec/knowledge/project-summary.md，之后再进入本次任务的 Proposal？
 ```
 
 如果用户同意，Codex 会先生成项目知识库；如果用户不同意，则只读取当前任务所需的最小上下文。
@@ -45,17 +46,17 @@ Codex 按 `skills/easy-spec/references/apply-guidelines.md` 执行：
 
 ### 3. Archive
 
-执行完成后，Codex 在目标项目中记录：
+执行完成后，Codex 在目标项目的 `easyspec/` 文件夹中记录：
 
 ```text
-knowledge/changes/YYYY-MM-DD-short-task-slug.md
-specs/archive/YYYY-MM-DD-short-task-slug/
+easyspec/knowledge/changes/YYYY-MM-DD-short-task-slug.md
+easyspec/specs/archive/YYYY-MM-DD-short-task-slug/
 ```
 
 必要时同步更新：
 
 ```text
-knowledge/project-summary.md
+easyspec/knowledge/project-summary.md
 ```
 
 ## 仓库结构

@@ -23,8 +23,9 @@ Before the first coding task in a target repository:
 
 1. Classify the target as new or existing.
 2. If it is an existing project, ask whether to read and summarize the project before changing code.
-3. If approved, create or refresh the project knowledge base under `knowledge/`.
-4. If it is a new project, skip the broad project scan and create lightweight notes only as decisions emerge.
+3. Ensure EasySpec-managed files live under the target project's `easyspec/` directory.
+4. If approved, create or refresh the project knowledge base under `easyspec/knowledge/`.
+5. If it is a new project, skip the broad project scan and create lightweight notes only as decisions emerge.
 
 Use the onboarding reference for exact boundaries and skip lists.
 
@@ -45,10 +46,10 @@ Write or present a proposal with:
 - Risks and rollback notes.
 - Archive destination.
 
-If the repository has `specs/active/`, write the proposal to:
+If the repository has `easyspec/specs/active/`, write the proposal to:
 
 ```text
-specs/active/YYYY-MM-DD-short-task-slug/proposal.md
+easyspec/specs/active/YYYY-MM-DD-short-task-slug/proposal.md
 ```
 
 Wait for explicit user approval before entering Apply. Clear approval can be phrased as "confirm", "approved", "go ahead", "进入 apply", "确认执行", or equivalent.
@@ -73,7 +74,7 @@ During Apply:
 After Apply is complete, archive the task:
 
 1. Record the final result, changed files, commands run, verification result, and follow-ups.
-2. Write the record under `knowledge/changes/YYYY-MM-DD-short-task-slug.md` when available.
-3. Move or copy the active proposal into `specs/archive/YYYY-MM-DD-short-task-slug/`.
-4. Update `knowledge/project-summary.md` only when durable project knowledge changed.
+2. Write the record under `easyspec/knowledge/changes/YYYY-MM-DD-short-task-slug.md` when available.
+3. Move or copy the active proposal into `easyspec/specs/archive/YYYY-MM-DD-short-task-slug/`.
+4. Update `easyspec/knowledge/project-summary.md` only when durable project knowledge changed.
 5. End the response with a concise summary and verification status.

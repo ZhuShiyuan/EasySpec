@@ -40,12 +40,15 @@ The skill enforces:
 
 After installation, identify the target project. If the target project is not obvious from the current working directory or the user's wording, ask one short question to identify it.
 
-In the target project, ensure these directories exist:
+In the target project root, create one EasySpec management directory. Keep EasySpec agent memory, project notes, proposals, and archives inside it so the normal project root stays clean.
+
+Ensure these directories exist:
 
 ```text
-knowledge/changes/
-specs/active/
-specs/archive/
+easyspec/
+easyspec/knowledge/changes/
+easyspec/specs/active/
+easyspec/specs/archive/
 ```
 
 Use these starter templates from this repository when creating target project records:
@@ -56,7 +59,9 @@ templates/archive.md
 templates/project-summary.md
 ```
 
-Do not create EasySpec's own `knowledge/` or `specs/` directories inside this distribution repository unless the user is developing EasySpec itself.
+Do not create top-level `knowledge/` or `specs/` directories in the target project. Use `easyspec/` as the single container for EasySpec-managed files.
+
+Do not create EasySpec's own `easyspec/`, `knowledge/`, or `specs/` directories inside this distribution repository unless the user is developing EasySpec itself.
 
 ## 3. Classify The Target Project
 
@@ -68,7 +73,7 @@ Classify the target project:
 For an existing project, ask before broad scanning:
 
 ```text
-这是一个已有项目。要不要我先阅读并整理项目结构、技术栈、运行命令和关键约定，生成 knowledge/project-summary.md，之后再进入本次任务的 Proposal？
+这是一个已有项目。要不要我先阅读并整理项目结构、技术栈、运行命令和关键约定，生成 easyspec/knowledge/project-summary.md，之后再进入本次任务的 Proposal？
 ```
 
 For a new project, skip broad scanning. Start with the requested task and record durable decisions later.
@@ -79,6 +84,6 @@ For every non-trivial coding task in the target project:
 
 1. Proposal: write the plan and wait for explicit approval.
 2. Apply: follow `skills/easy-spec/references/apply-guidelines.md`.
-3. Archive: write the task record under `knowledge/changes/` and move or copy the proposal to `specs/archive/`.
+3. Archive: write the task record under `easyspec/knowledge/changes/` and move or copy the proposal to `easyspec/specs/archive/`.
 
 Archive means task documentation. Do not close or archive the conversation unless the user explicitly requests that.
