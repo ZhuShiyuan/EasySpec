@@ -1,9 +1,9 @@
-# New Project First Task
+# 新项目的第一个任务
 
-User:
+用户：
 
 ```text
 请使用 EasySpec，新建一个 Next.js 项目并做一个任务列表页面。
 ```
 
-Codex should not run a broad project scan. It should write a proposal with stack assumptions, planned files, verification, and archive location. After user confirmation, Codex enters Apply.
+Codex 不应该做全量项目扫描。它应该写出包含技术栈假设、计划文件、验证方式和归档位置的 proposal。用户确认后，Codex 才进入 Apply。

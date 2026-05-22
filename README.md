@@ -13,7 +13,7 @@ Codex 读取这个仓库后，会自动完成这些事：
 - 安装或更新 `easy-spec` skill。
 - 不把本仓库的 `README.md` 复制到你的项目里，避免和你自己的 README 冲突。
 - 在你的项目根目录创建或更新一个 `agent.md` 入口文件。
-- 把 EasySpec 的设定、记忆、proposal 和归档统一放进 `openspec/`。
+- 把 EasySpec 的设定、记忆、proposal 和归档统一放进 `easyspec/`。
 - 对每个非简单代码任务使用 `Proposal -> Apply -> Archive` 工作流。
 
 ## 怎么使用
@@ -31,12 +31,12 @@ Codex 读取这个仓库后，会自动完成这些事：
 如果是已有项目，Codex 会先询问是否要阅读并整理项目：
 
 ```text
-这是一个已有项目。要不要我先阅读并整理项目结构、技术栈、运行命令和关键约定，生成 openspec/knowledge/project-summary.md，之后再进入本次任务的 Proposal？
+这是一个已有项目。要不要我先阅读并整理项目结构、技术栈、运行命令和关键约定，生成 easyspec/knowledge/project-summary.md，之后再进入本次任务的 Proposal？
 ```
 
 如果你同意，Codex 会先生成项目知识库；如果你不同意，它只读取当前任务需要的最小上下文。
 
-如果是新项目，Codex 不会做全量项目扫描，而是直接进入当前任务的 Proposal。项目约定、命令和架构决策会在后续任务中逐步写入 `openspec/`。
+如果是新项目，Codex 不会做全量项目扫描，而是直接进入当前任务的 Proposal。项目约定、命令和架构决策会在后续任务中逐步写入 `easyspec/`。
 
 ## 工作流
 
@@ -56,7 +56,7 @@ Codex 按 EasySpec 的 apply 规范执行：
 
 ### Archive
 
-任务完成后，Codex 会把本次修改记录到 `openspec/`，包括改了什么、运行了哪些验证、还有什么后续事项。
+任务完成后，Codex 会把本次修改记录到 `easyspec/`，包括改了什么、运行了哪些验证、还有什么后续事项。
 
 ## 安装后项目里会多什么
 
@@ -64,7 +64,7 @@ EasySpec 只会在你的项目里管理这些文件：
 
 ```text
 agent.md
-openspec/
+easyspec/
   settings.md
   knowledge/
   specs/
@@ -72,7 +72,7 @@ openspec/
 
 `agent.md` 是根目录里的触发入口，用来提醒后续 agent 读取 EasySpec 设定。
 
-`openspec/` 是 EasySpec 的工作区，用来保存项目记忆、任务 proposal 和归档记录。
+`easyspec/` 是 EasySpec 的工作区，用来保存项目记忆、任务 proposal 和归档记录。
 
 ## 这个仓库里有什么
 

@@ -1,4 +1,4 @@
 interface:
   display_name: "Easy Spec"
-  short_description: "Proposal, apply, archive workflow for Codex coding tasks."
-  default_prompt: "Use Easy Spec to plan, implement, validate, and archive coding tasks."
+  short_description: "用于 Codex 代码任务的 Proposal、Apply、Archive 工作流。"
+  default_prompt: "使用 EasySpec 规划、实现、验证并归档代码任务。"

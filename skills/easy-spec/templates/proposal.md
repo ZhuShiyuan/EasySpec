@@ -1,43 +1,43 @@
-# Proposal: <task title>
+# Proposal: <任务标题>
 
-Status: proposed
-Date: YYYY-MM-DD
+状态：proposed
+日期：YYYY-MM-DD
 
-## Goal
+## 目标
 
-<What should be true when this task is complete.>
+<任务完成后应该成立的结果。>
 
-## Context
+## 背景
 
-<Relevant request, repo state, constraints, and prior knowledge.>
+<相关请求、仓库状态、约束和已有知识。>
 
-## Assumptions
+## 假设
 
-- <Assumption that affects the implementation.>
+- <会影响实现的假设。>
 
-## Scope
+## 范围
 
-- <Included work.>
+- <本次包含的工作。>
 
-## Non-Goals
+## 非目标
 
-- <Excluded work.>
+- <本次明确不做的工作。>
 
-## Plan
+## 计划
 
-1. <Step> -> verify: <check>
-2. <Step> -> verify: <check>
-3. <Step> -> verify: <check>
+1. <步骤> -> 验证：<检查方式>
+2. <步骤> -> 验证：<检查方式>
+3. <步骤> -> 验证：<检查方式>
 
-## Likely Files
+## 预计文件
 
-- `<path>`: <why it may change>
+- `<path>`：<为什么可能修改它>
 
-## Risks
+## 风险
 
-- <Risk and mitigation.>
+- <风险和缓解方式。>
 
-## Archive Plan
+## 归档计划
 
-- Change record: `openspec/knowledge/changes/YYYY-MM-DD-short-task-slug.md`
-- Spec archive: `openspec/specs/archive/YYYY-MM-DD-short-task-slug/`
+- 变更记录：`easyspec/knowledge/changes/YYYY-MM-DD-short-task-slug.md`
+- Spec 归档：`easyspec/specs/archive/YYYY-MM-DD-short-task-slug/`

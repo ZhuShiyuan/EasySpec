@@ -1,57 +1,57 @@
-# Project Onboarding
+# 项目初始化
 
-Use this reference before the first coding task in a target repository.
+目标项目第一次执行代码任务前使用本参考。
 
-## Classify the Project
+## 判断项目类型
 
-Treat a project as existing when one or more are true:
+满足以下任意条件时，按已有项目处理：
 
-- It has meaningful source files, tests, docs, or configuration beyond a blank scaffold.
-- It has a `.git` directory with previous commits.
-- It has dependency manifests, application entry points, or established conventions.
-- The user describes it as an old, existing, production, migrated, or maintained project.
+- 已经有有意义的源码、测试、文档或配置，而不只是空脚手架。
+- 有 `.git` 目录和既有提交历史。
+- 有依赖清单、应用入口或明确的项目约定。
+- 用户描述它是老项目、已有项目、生产项目、迁移项目或维护中的项目。
 
-Treat a project as new when:
+满足以下条件时，按新项目处理：
 
-- The directory is empty or only contains the EasySpec repository itself.
-- The user says they are starting fresh.
-- There is no established codebase to summarize.
+- 目录为空，或只包含 EasySpec 分发仓库本身。
+- 用户明确说这是新项目。
+- 没有需要总结的既有代码库。
 
-If classification is uncertain, ask one short question before broad scanning.
+如果无法判断，先问一个简短问题，不要直接全量扫描。
 
-## Existing Project Flow
+## 已有项目流程
 
-Before broad reading, ask:
+全量阅读前先问：
 
 ```text
-这是一个已有项目。要不要我先阅读并整理项目结构、技术栈、运行命令和关键约定，生成一份 openspec/knowledge/project-summary.md，之后再进入本次任务的 Proposal？
+这是一个已有项目。要不要我先阅读并整理项目结构、技术栈、运行命令和关键约定，生成一份 easyspec/knowledge/project-summary.md，之后再进入本次任务的 Proposal？
 ```
 
-If the user approves:
+如果用户同意：
 
-1. Read repository docs, manifests, entry points, tests, and configuration.
-2. Skip dependency folders, generated outputs, caches, logs, secrets, and large binaries.
-3. Generate or refresh `openspec/knowledge/project-summary.md`.
-4. Add project-specific conventions to `openspec/knowledge/conventions.md` only when useful.
-5. Continue to the task Proposal.
+1. 阅读仓库文档、依赖清单、入口文件、测试和配置。
+2. 跳过依赖目录、生成产物、缓存、日志、密钥和大型二进制文件。
+3. 创建或刷新 `easyspec/knowledge/project-summary.md`。
+4. 只有在有价值时，才把项目约定写入 `easyspec/knowledge/conventions.md`。
+5. 然后进入当前任务的 Proposal。
 
-If the user declines, continue with only the context needed for the requested task.
+如果用户拒绝，只读取当前任务所需的最小上下文。
 
-## New Project Flow
+## 新项目流程
 
-For a new project:
+对于新项目：
 
-1. Do not perform a broad project summary.
-2. Create `openspec/knowledge/project-summary.md` only after the user confirms project direction or durable decisions exist.
-3. Record architecture, commands, conventions, and open questions as they appear.
+1. 不做全量项目总结。
+2. 只有在用户确认项目方向或出现长期决策后，才创建 `easyspec/knowledge/project-summary.md`。
+3. 随任务推进逐步记录架构、命令、约定和开放问题。
 
-## Knowledge Base Shape
+## 知识库结构
 
-Prefer this layout when the target repository allows it:
+目标项目允许时，优先使用：
 
 ```text
 agent.md
-openspec/
+easyspec/
   settings.md
   knowledge/
     project-summary.md
@@ -63,4 +63,4 @@ openspec/
     archive/
 ```
 
-Keep knowledge concise and durable. Do not archive chat transcripts.
+知识库要简洁、稳定、可复用。不要保存聊天记录全文。

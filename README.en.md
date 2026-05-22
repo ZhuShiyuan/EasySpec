@@ -13,7 +13,7 @@ After Codex reads this repository, it should:
 - Install or update the `easy-spec` skill.
 - Avoid copying this repository's `README.md` into your project, so it does not conflict with your own README.
 - Create or update one root-level `agent.md` entry file in your project.
-- Keep EasySpec settings, memory, proposals, and archives inside `openspec/`.
+- Keep EasySpec settings, memory, proposals, and archives inside `easyspec/`.
 - Use a `Proposal -> Apply -> Archive` workflow for non-trivial coding tasks.
 
 ## How To Use
@@ -31,12 +31,12 @@ Then ask for work normally. Codex should first decide whether your target projec
 For an existing project, Codex should ask before broad scanning:
 
 ```text
-This looks like an existing project. Should I first read and summarize the project structure, tech stack, run commands, and key conventions into openspec/knowledge/project-summary.md before entering Proposal for this task?
+This looks like an existing project. Should I first read and summarize the project structure, tech stack, run commands, and key conventions into easyspec/knowledge/project-summary.md before entering Proposal for this task?
 ```
 
 If you approve, Codex creates a project knowledge base first. If you decline, it reads only the minimum context needed for the current task.
 
-For a new project, Codex skips broad project scanning and starts with the current task's Proposal. Project conventions, commands, and architecture decisions are recorded into `openspec/` over time.
+For a new project, Codex skips broad project scanning and starts with the current task's Proposal. Project conventions, commands, and architecture decisions are recorded into `easyspec/` over time.
 
 ## Workflow
 
@@ -56,7 +56,7 @@ Codex follows the EasySpec apply rules:
 
 ### Archive
 
-After the task is complete, Codex records what changed, what verification ran, and any follow-ups inside `openspec/`.
+After the task is complete, Codex records what changed, what verification ran, and any follow-ups inside `easyspec/`.
 
 ## What Gets Added To Your Project
 
@@ -64,7 +64,7 @@ EasySpec manages only these files in your target project:
 
 ```text
 agent.md
-openspec/
+easyspec/
   settings.md
   knowledge/
   specs/
@@ -72,7 +72,7 @@ openspec/
 
 `agent.md` is the root-level trigger file that tells future agents to read the EasySpec settings.
 
-`openspec/` is the EasySpec workspace for project memory, task proposals, and archive records.
+`easyspec/` is the EasySpec workspace for project memory, task proposals, and archive records.
 
 ## Repository Structure
 

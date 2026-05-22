@@ -1,82 +1,82 @@
 ---
 name: easy-spec
-description: Enforce a lightweight Codex coding workflow with Proposal, Apply, and Archive phases. Use when a user asks Codex to follow EasySpec, spec-first development, proposal/apply/archive, project knowledge base maintenance, or task archiving for coding changes in a new or existing repository.
+description: "为 Codex 执行轻量 Proposal、Apply、Archive 编码工作流。适用于用户要求使用 EasySpec、spec-first development、proposal/apply/archive、项目知识库维护，或为新项目/已有项目归档代码任务。"
 ---
 
 # Easy Spec
 
-## Overview
+## 概览
 
-Easy Spec keeps coding work explicit and recoverable: agree on a proposal, implement under tight apply-stage coding rules, then archive what changed into project knowledge.
+EasySpec 让代码修改过程更明确、可追溯：先和用户确认 proposal，再在严格的 apply 规范下实现，最后把变更记录进项目知识库。
 
-Archive means writing a task record. It does not mean closing the conversation.
+Archive 指写入任务记录，不是关闭当前对话。
 
-## Load These References
+## 需要读取的资料
 
-- Read `references/apply-guidelines.md` before entering Apply.
-- Read `references/project-onboarding.md` when deciding whether a target project is new or existing.
-- Use `references/spec-template.md` when creating a proposal file.
-- Use `templates/` when initializing `agent.md`, `openspec/settings.md`, proposals, archive records, and project summaries.
+- 进入 Apply 前，读取 `references/apply-guidelines.md`。
+- 判断目标项目是新项目还是已有项目时，读取 `references/project-onboarding.md`。
+- 创建 proposal 时，参考 `references/spec-template.md`。
+- 初始化 `agent.md`、`easyspec/settings.md`、proposal、归档记录和项目摘要时，使用 `templates/`。
 
-## Phase 0: Project Onboarding
+## 阶段 0：项目初始化
 
-Before the first coding task in a target repository:
+目标项目第一次使用 EasySpec 前：
 
-1. Classify the target as new or existing.
-2. If it is an existing project, ask whether to read and summarize the project before changing code.
-3. Ensure the target project root has only one EasySpec trigger file: `agent.md`.
-4. Ensure all other EasySpec-managed files live under the target project's `openspec/` directory.
-5. If approved, create or refresh the project knowledge base under `openspec/knowledge/`.
-6. If it is a new project, skip the broad project scan and create lightweight notes only as decisions emerge.
+1. 判断目标项目是新项目还是已有项目。
+2. 如果是已有项目，先询问是否需要在改代码前阅读并总结项目。
+3. 确保目标项目根目录只有一个 EasySpec 触发文件：`agent.md`。
+4. 确保其他 EasySpec 管理文件都在目标项目的 `easyspec/` 目录下。
+5. 如果用户同意整理已有项目，创建或刷新 `easyspec/knowledge/` 下的项目知识库。
+6. 如果是新项目，跳过全量项目扫描，只在产生稳定决策后逐步记录轻量笔记。
 
-Use the onboarding reference for exact boundaries and skip lists.
+具体边界和跳过规则见项目初始化参考。
 
-## Phase 1: Proposal
+## 阶段 1：Proposal
 
-For every non-trivial coding task, start in Proposal.
+每个非简单代码任务都从 Proposal 开始。
 
-Proposal may include read-only exploration, but no code edits.
+Proposal 阶段可以做只读探索，但不要修改代码。
 
-Write or present a proposal with:
+Proposal 应包含：
 
-- Goal and user-visible outcome.
-- Assumptions and open questions.
-- Scope and non-goals.
-- Planned steps.
-- Files or modules likely to change.
-- Verification plan.
-- Risks and rollback notes.
-- Archive destination.
+- 目标和用户可见结果。
+- 假设和待确认问题。
+- 范围和非目标。
+- 执行步骤。
+- 预计会修改的文件或模块。
+- 验证计划。
+- 风险和回退说明。
+- 归档位置。
 
-If the repository has `openspec/specs/active/`, write the proposal to:
+如果目标项目已有 `easyspec/specs/active/`，把 proposal 写到：
 
 ```text
-openspec/specs/active/YYYY-MM-DD-short-task-slug/proposal.md
+easyspec/specs/active/YYYY-MM-DD-short-task-slug/proposal.md
 ```
 
-Wait for explicit user approval before entering Apply. Clear approval can be phrased as "confirm", "approved", "go ahead", "进入 apply", "确认执行", or equivalent.
+等待用户明确确认后再进入 Apply。确认可以是“confirm”、“approved”、“go ahead”、“进入 apply”、“确认执行”等同义表达。
 
-For tiny read-only answers or trivial one-line edits, ask whether the user wants the full EasySpec ceremony or a compact proposal.
+对于只读回答或非常小的一行修改，先询问用户是要完整 EasySpec 流程，还是使用简化 proposal。
 
-## Phase 2: Apply
+## 阶段 2：Apply
 
-Before editing files, read `references/apply-guidelines.md`.
+编辑文件前，读取 `references/apply-guidelines.md`。
 
-During Apply:
+Apply 阶段：
 
-- Follow the accepted proposal.
-- Keep changes surgical and scoped.
-- Use the repository's existing patterns.
-- Update the user when making edits.
-- Run the planned verification, or explain why a check cannot run.
-- If the plan must change, pause and update the proposal before continuing.
+- 遵守已确认的 proposal。
+- 保持修改局部、克制。
+- 使用项目现有模式。
+- 修改文件前向用户说明要做什么。
+- 运行计划中的验证；如果不能运行，说明原因。
+- 如果计划需要改变，先暂停并更新 proposal，再继续。
 
-## Phase 3: Archive
+## 阶段 3：Archive
 
-After Apply is complete, archive the task:
+Apply 完成后归档任务：
 
-1. Record the final result, changed files, commands run, verification result, and follow-ups.
-2. Write the record under `openspec/knowledge/changes/YYYY-MM-DD-short-task-slug.md` when available.
-3. Move or copy the active proposal into `openspec/specs/archive/YYYY-MM-DD-short-task-slug/`.
-4. Update `openspec/knowledge/project-summary.md` only when durable project knowledge changed.
-5. End the response with a concise summary and verification status.
+1. 记录最终结果、修改文件、运行过的命令、验证结果和后续事项。
+2. 如果可用，把记录写到 `easyspec/knowledge/changes/YYYY-MM-DD-short-task-slug.md`。
+3. 把当前 proposal 移动或复制到 `easyspec/specs/archive/YYYY-MM-DD-short-task-slug/`。
+4. 只有在长期项目知识发生变化时，才更新 `easyspec/knowledge/project-summary.md`。
+5. 最终回复要简洁说明改了什么和验证状态。

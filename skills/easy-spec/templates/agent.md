@@ -1,18 +1,18 @@
-## EasySpec Agent Entry
+## EasySpec Agent 入口
 
-Use EasySpec for this project.
+本项目使用 EasySpec。
 
-Before planning or changing code:
+规划或修改代码前：
 
-1. Read `openspec/settings.md`.
-2. Read `openspec/knowledge/project-summary.md` if it exists.
-3. Read relevant recent records under `openspec/knowledge/changes/`.
-4. Check `openspec/specs/active/` for an active proposal.
+1. 读取 `easyspec/settings.md`。
+2. 如果存在，读取 `easyspec/knowledge/project-summary.md`。
+3. 读取 `easyspec/knowledge/changes/` 下相关的近期记录。
+4. 检查 `easyspec/specs/active/` 中是否已有当前 proposal。
 
-For non-trivial coding tasks, follow Proposal -> Apply -> Archive:
+对于非简单代码任务，遵守 Proposal -> Apply -> Archive：
 
-1. Proposal: write the plan under `openspec/specs/active/YYYY-MM-DD-short-task-slug/proposal.md` and wait for user confirmation.
-2. Apply: make only the approved, scoped changes.
-3. Archive: move or copy the proposal to `openspec/specs/archive/` and record the result under `openspec/knowledge/changes/`.
+1. Proposal：把计划写到 `easyspec/specs/active/YYYY-MM-DD-short-task-slug/proposal.md`，等待用户确认。
+2. Apply：只执行已确认、范围明确的修改。
+3. Archive：把 proposal 移动或复制到 `easyspec/specs/archive/`，并把结果记录到 `easyspec/knowledge/changes/`。
 
-Do not put EasySpec memory, project notes, specs, or archive files in the project root.
+不要把 EasySpec 记忆、项目说明、spec 或归档文件放在项目根目录。

@@ -1,35 +1,35 @@
-# Project Summary
+# 项目摘要
 
-Last updated: YYYY-MM-DD
+最后更新：YYYY-MM-DD
 
-## Purpose
+## 项目用途
 
-<What this project is for.>
+<这个项目是做什么的。>
 
-## Current Status
+## 当前状态
 
-<New project, existing project, production, prototype, etc.>
+<新项目、已有项目、生产项目、原型等。>
 
-## Tech Stack
+## 技术栈
 
-- <Language/framework/runtime>
+- <语言/框架/运行时>
 
-## Repository Map
+## 仓库地图
 
-- `<path>`: <purpose>
+- `<path>`：<用途>
 
-## Common Commands
+## 常用命令
 
-- `<command>`: <what it does>
+- `<command>`：<作用>
 
-## Coding Conventions
+## 编码约定
 
-- <Durable convention that future tasks should respect.>
+- <后续任务应该遵守的稳定约定。>
 
-## Architecture Notes
+## 架构备注
 
-- <Important design decisions and boundaries.>
+- <重要设计决策和边界。>
 
-## Open Questions
+## 开放问题
 
-- <Question that affects future work.>
+- <会影响后续工作的未决问题。>

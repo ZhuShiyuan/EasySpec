@@ -1,25 +1,25 @@
-# EasySpec Settings
+# EasySpec 设置
 
-## Workflow
+## 工作流
 
-- Use Proposal -> Apply -> Archive for non-trivial coding tasks.
-- Ask before broad-scanning an existing project.
-- Skip broad project scans for new projects unless the user asks.
-- Keep EasySpec-managed files under `openspec/`.
-- Keep only `agent.md` in the project root as the EasySpec trigger file.
+- 非简单代码任务使用 Proposal -> Apply -> Archive。
+- 对已有项目做全量扫描前先询问用户。
+- 新项目默认不做全量项目扫描，除非用户要求。
+- EasySpec 管理的文件都放在 `easyspec/`。
+- 项目根目录只保留 `agent.md` 作为 EasySpec 触发文件。
 
-## Paths
+## 路径
 
-- Active proposals: `openspec/specs/active/`
-- Archived proposals: `openspec/specs/archive/`
-- Project summary: `openspec/knowledge/project-summary.md`
-- Change records: `openspec/knowledge/changes/`
-- Project conventions: `openspec/knowledge/conventions.md`
+- 当前 proposal：`easyspec/specs/active/`
+- 已归档 proposal：`easyspec/specs/archive/`
+- 项目摘要：`easyspec/knowledge/project-summary.md`
+- 变更记录：`easyspec/knowledge/changes/`
+- 项目约定：`easyspec/knowledge/conventions.md`
 
-## Apply Rules
+## Apply 规则
 
-- State important assumptions.
-- Keep changes minimal and scoped.
-- Match the existing project style.
-- Avoid unrelated refactors and formatting churn.
-- Run relevant verification when practical.
+- 说明关键假设。
+- 保持修改最小且范围明确。
+- 匹配项目现有风格。
+- 避免无关重构和格式化 churn。
+- 可行时运行相关验证。

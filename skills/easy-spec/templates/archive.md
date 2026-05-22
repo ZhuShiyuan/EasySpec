@@ -1,33 +1,33 @@
-# Change Record: <task title>
+# 变更记录：<任务标题>
 
-Date: YYYY-MM-DD
-Status: archived
+日期：YYYY-MM-DD
+状态：archived
 
-## Original Request
+## 原始请求
 
-<User request in one or two sentences.>
+<用一两句话概括用户请求。>
 
-## Accepted Proposal
+## 已确认 Proposal
 
-<Link to archived proposal or summarize the approved plan.>
+<链接到已归档 proposal，或概括已确认计划。>
 
-## What Changed
+## 修改内容
 
-- `<path>`: <change summary>
+- `<path>`：<修改摘要>
 
-## Verification
+## 验证
 
-- `<command or check>`: <result>
+- `<命令或检查>`：<结果>
 
-## Review
+## 复核
 
-- Result: <pass/fail>
-- Notes: <important findings>
+- 结果：<通过/失败>
+- 备注：<重要发现>
 
-## Durable Knowledge
+## 长期知识
 
-- <New convention, command, architecture decision, or none.>
+- <新增约定、命令、架构决策，或无。>
 
-## Follow-Ups
+## 后续事项
 
-- <Optional next step, or none.>
+- <可选后续步骤，或无。>

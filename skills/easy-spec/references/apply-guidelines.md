@@ -1,64 +1,64 @@
-# Apply Guidelines
+# Apply 规范
 
-These rules govern the Apply phase. They are adapted from the user-provided `CODEX.md`.
+这些规则用于 Apply 阶段，来源于用户提供的编码约束。
 
-## 1. Think Before Coding
+## 1. 写代码前先想清楚
 
-Do not assume silently.
+不要默默假设。
 
-- State important assumptions before implementing.
-- Ask a clarifying question when a wrong assumption would be costly.
-- Present meaningful interpretations when multiple plausible readings exist.
-- Surface tradeoffs when speed, scope, compatibility, or maintainability conflict.
-- Push back gently when the requested approach is more complex or risky than needed.
+- 实现前说明关键假设。
+- 如果错误假设代价较高，先问澄清问题。
+- 如果存在多种合理理解，列出来，不要悄悄选择一个。
+- 当速度、范围、兼容性或可维护性互相冲突时，说明权衡。
+- 如果用户要求的方法过于复杂或风险较高，要温和指出。
 
-## 2. Simplicity First
+## 2. 简单优先
 
-Write the minimum code that solves the approved proposal.
+只写完成已确认 proposal 所需的最少代码。
 
-- Do not add features beyond what was approved.
-- Do not introduce abstractions for single-use code.
-- Do not add configurability or extension points unless the proposal requires them.
-- Do not add elaborate handling for impossible or irrelevant scenarios.
-- If the implementation becomes much larger than the problem warrants, simplify before continuing.
+- 不添加 proposal 之外的功能。
+- 不为一次性逻辑创建抽象。
+- 不添加任务不需要的配置项或扩展点。
+- 不为不可能或无关场景编写复杂处理。
+- 如果实现明显大于问题本身，先简化再继续。
 
-Use this check: a senior engineer should be able to see why each changed line exists.
+自检标准：一个资深工程师应当能看出每一处改动为什么存在。
 
-## 3. Surgical Changes
+## 3. 局部修改
 
-Touch only what the task requires.
+只修改任务真正需要的地方。
 
-- Match the existing project style.
-- Avoid opportunistic refactors, formatting churn, comment rewrites, and adjacent cleanup.
-- Remove imports, variables, functions, files, or test data made unused by your own change.
-- Leave pre-existing dead code alone unless the user explicitly asks to remove it.
-- Mention unrelated issues when useful, but do not fix them inside the current task.
+- 匹配项目现有风格。
+- 避免顺手重构、格式化 churn、重写无关注释或清理相邻代码。
+- 清理由本次改动造成的未使用 import、变量、函数、文件或测试数据。
+- 不删除原本就存在的死代码，除非用户明确要求。
+- 发现无关问题时可以提到，但不要放进当前任务里修。
 
-Every changed line should trace back to the accepted proposal.
+每一行改动都应该能追溯到已确认的 proposal。
 
-## 4. Goal-Driven Execution
+## 4. 面向验证执行
 
-Turn work into verifiable goals and loop until checked.
+把工作转成可验证目标，并循环到检查完成。
 
-- For a bug fix, prefer a test or reproduction that fails before the fix and passes after.
-- For validation changes, cover representative invalid and valid inputs.
-- For refactors, preserve behavior and run relevant tests before and after when practical.
-- For multi-step tasks, keep a brief plan with a verification step for each milestone.
-- If tests cannot run, explain what was not verified and why.
+- 修 bug 时，优先写一个修复前失败、修复后通过的测试或复现。
+- 改校验逻辑时，覆盖代表性的有效和无效输入。
+- 做重构时，尽量在前后运行相关测试，确保行为不变。
+- 多步骤任务中，每个关键里程碑都要有验证方式。
+- 如果测试不能运行，说明哪些没有验证以及原因。
 
-Example:
+示例：
 
 ```text
-1. Reproduce the issue -> verify: failing test or observed error
-2. Implement the smallest fix -> verify: targeted test passes
-3. Check nearby behavior -> verify: relevant suite or manual smoke test passes
+1. 复现问题 -> 验证：失败测试或可观察错误
+2. 实现最小修复 -> 验证：目标测试通过
+3. 检查相邻行为 -> 验证：相关测试或手动冒烟检查通过
 ```
 
-## 5. Completion Bar
+## 5. 完成标准
 
-The Apply phase is complete only when:
+Apply 阶段完成时应满足：
 
-- The implementation matches the accepted proposal or the proposal has been explicitly updated.
-- The planned verification has run, or the limitation is documented.
-- No unrelated user changes were reverted.
-- The archive record can compare the actual result against the proposal.
+- 实现符合已确认 proposal，或 proposal 已明确更新。
+- 计划中的验证已运行，或限制已说明。
+- 没有回退用户已有的无关改动。
+- 归档记录能够对照 proposal 说明实际结果。
